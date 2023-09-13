@@ -15,7 +15,7 @@ from skimage.transform import resize
 import matplotlib.pyplot as plt
 import cv2
 import os
-
+# your project path
 os.chdir("E:/Users/İndirilenler/yapay_zeka_proje_Lane_Detection/")
 # eğitim resimleri
 train_images = pickle.load(open("full_CNN_train.p", "rb" ))

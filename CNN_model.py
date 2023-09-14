@@ -17,7 +17,7 @@ import cv2
 import os
 # Your Project Path
 os.chdir("E:/Users/İndirilenler/yapay_zeka_proje_Lane_Detection/")
-# eğitim resimleri
+# Training Data
 train_images = pickle.load(open("full_CNN_train.p", "rb" ))
 
 # Processed Images

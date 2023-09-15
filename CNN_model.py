@@ -28,10 +28,10 @@ labels = pickle.load(open("full_CNN_labels.p", "rb" ))
 train_images = np.array(train_images)
 labels = np.array(labels)
 
-# Normalize labels - training images get normalized to start in the network
+# Normalize labels - training datas get normalized to start in the network
 labels = labels / 255
 
-# Görüntüler karıştırılır, eğitim ve doğrulama olarak ayrılır
+# Images are shuffled and separated into training and validation
 train_images, labels = shuffle(train_images, labels)
 
 X_train, X_val, y_train, y_val = train_test_split(train_images, labels, test_size=0.1)

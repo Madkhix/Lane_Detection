@@ -37,7 +37,7 @@ train_images, labels = shuffle(train_images, labels)
 X_train, X_val, y_train, y_val = train_test_split(train_images, labels, test_size=0.1)
 
 
-# Ağa verilen örnek sayısı, tekrar sayısı ve pool size oluşturulacak havuzun boyutunu belirler
+# The number of samples given to the network, the number of repetitions and the pool size determine the size of the pool to be created.
 batch_size = 256
 epochs = 10
 pool_size = (2, 2)

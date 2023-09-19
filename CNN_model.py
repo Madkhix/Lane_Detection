@@ -44,7 +44,7 @@ pool_size = (2, 2)
 input_shape = X_train.shape[1:]
 
 
-# Sinir ağı
+# Neural Networks
 model = Sequential()
 # Gelen verileri normalize eder ve işlemin başlaması için ilk katmana giriş değeri atarız
 model.add(BatchNormalization(input_shape=input_shape))

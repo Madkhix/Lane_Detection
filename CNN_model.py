@@ -119,7 +119,7 @@ model.add(Conv2DTranspose(16, (3, 3), padding='valid', strides=(1,1), activation
 # Final
 model.add(Conv2DTranspose(1, (3, 3), padding='valid', strides=(1,1), activation = 'relu', name = 'Final'))
 
-# Sinir ağı
+# Neural Network 
 
 
 from keras import optimizers

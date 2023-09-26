@@ -138,7 +138,7 @@ epochs=epochs, verbose=1, validation_data=(X_val, y_val))
 # print(len(model.layers)) 
 
 
-# modelin eğtilmesi durur
+# Training Of The Model Stops
 model.trainable = False
 model.compile(optimizer='Adam', loss='mean_squared_error',metrics=['accuracy'])
 # modeli kaydet

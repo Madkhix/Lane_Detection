@@ -3,7 +3,7 @@ import matplotlib.image as mpimg
 import numpy as np
 import cv2
 import os
-
+# Your Project Path
 os.chdir('E:/Users/İndirilenler/yapay_zeka_proje_Lane_Detection')
 
 image = mpimg.imread('test_images/solidYellowLeft.jpg')

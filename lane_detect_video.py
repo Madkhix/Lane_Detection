@@ -5,7 +5,7 @@ from moviepy.editor import VideoFileClip
 from IPython.display import HTML
 from keras.models import load_model
 
-# model yükle
+# Load Module
 model = load_model('full_CNN_model.h5')
 
 class Lanes():

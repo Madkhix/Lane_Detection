@@ -15,7 +15,7 @@ class Lanes():
 
 def road_lines(image):
 
-    # Preparing images for the model
+    # Preparing Images For The Model
     small_img = resize(image, (80, 160, 3))
     small_img = np.array(small_img)
     small_img = small_img[None,:,:,:]

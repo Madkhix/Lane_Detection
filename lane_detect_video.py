@@ -20,7 +20,7 @@ def road_lines(image):
     small_img = np.array(small_img)
     small_img = small_img[None,:,:,:]
 
-    # Sinir ağı tahmini (Çarpma işlemi ile normalleştirilir)
+    # Neural network prediction (Normalized by multiplication)
     prediction = model.predict(small_img)[0] * 255
 
     # Ortalama almak için tahmin ekleme

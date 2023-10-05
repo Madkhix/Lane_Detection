@@ -20,10 +20,10 @@ def road_lines(image):
     small_img = np.array(small_img)
     small_img = small_img[None,:,:,:]
 
-    # Neural network prediction (Normalized by multiplication)
+    # Neural Network Prediction (Normalized By Multiplication)
     prediction = model.predict(small_img)[0] * 255
 
-    # Ortalama almak için tahmin ekleme
+    # Add Prediction To gGt Average
     lanes.recent_fit.append(prediction)
     # Son beş tahmin kullanılır
     if len(lanes.recent_fit) > 5:

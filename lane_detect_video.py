@@ -23,13 +23,13 @@ def road_lines(image):
     # Neural Network Prediction (Normalized By Multiplication)
     prediction = model.predict(small_img)[0] * 255
 
-    # Add Prediction To gGt Average
+    # Add Prediction To Get Average
     lanes.recent_fit.append(prediction)
     # Son beş tahmin kullanılır
     if len(lanes.recent_fit) > 5:
         lanes.recent_fit = lanes.recent_fit[1:]
 
-    # Ortalama algılama hesaplanır
+    # Average Detection Is Calculated
     lanes.avg_fit = np.mean(np.array([i for i in lanes.recent_fit]), axis = 0)
 
     # Kırmızı ve mavi renk boyutları üretilir, yeşil renk ile tutulur

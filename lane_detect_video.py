@@ -32,7 +32,7 @@ def road_lines(image):
     # Average Detection Is Calculated
     lanes.avg_fit = np.mean(np.array([i for i in lanes.recent_fit]), axis = 0)
 
-    # Kırmızı ve mavi renk boyutları üretilir, yeşil renk ile tutulur
+    # Produced In Red And Blue Color Sizes, Stored In Green Color
     blanks = np.zeros_like(lanes.avg_fit).astype(np.uint8)
     lane_drawn = np.dstack((blanks, lanes.avg_fit, blanks))
 

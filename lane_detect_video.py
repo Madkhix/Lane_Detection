@@ -36,7 +36,7 @@ def road_lines(image):
     blanks = np.zeros_like(lanes.avg_fit).astype(np.uint8)
     lane_drawn = np.dstack((blanks, lanes.avg_fit, blanks))
 
-    # Orijinal görüntü ile eşleştirilir
+    # Matched With Original Image
     lane_image = resize(lane_drawn, (720, 1280, 3))
 
     # Şerit çizimi orijinal görüntü ile birleştirilir

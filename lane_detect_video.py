@@ -39,7 +39,7 @@ def road_lines(image):
     # Matched With Original Image
     lane_image = resize(lane_drawn, (720, 1280, 3))
 
-    # Şerit çizimi orijinal görüntü ile birleştirilir
+    # The Strip Drawing Is Merged With The Original Image
     result = cv2.addWeighted(image, 1, lane_image, 1, 0, dtype=cv2.CV_32F)
 
     return result

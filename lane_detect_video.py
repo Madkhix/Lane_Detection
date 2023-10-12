@@ -46,7 +46,7 @@ def road_lines(image):
 
 lanes = Lanes()
 
-# işlenmiş video
+# Processed Video
 vid_output = 'test4_out.mp4'
 
 # giriş videosu

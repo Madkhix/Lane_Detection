@@ -49,7 +49,7 @@ lanes = Lanes()
 # Processed Video
 vid_output = 'test4_out.mp4'
 
-# intro video
+# Raw Video
 clip1 = VideoFileClip("test4.mp4")
 
 vid_clip = clip1.fl_image(road_lines)

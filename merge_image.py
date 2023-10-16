@@ -4,7 +4,7 @@ import matplotlib.image as mpimg
 import numpy as np
 import cv2
 import os
-# Read in and grayscale the image
+# Read In And Grayscale The Image
 
 def process(img):
     image = cv2.imread(img,1)

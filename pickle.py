@@ -7,33 +7,44 @@ from numpy import newaxis
 from skimage.transform import resize
 import pickle
 
+# 'a' ve 'b' adlı iki liste oluşturuluyor, bu listeler görüntü verilerini depolamak için kullanılacak
 a = []
 b = []
 
+# 'input_images' klasöründeki *.jpg uzantılı tüm dosyaları işleyin
 for (i,image_file) in enumerate(glob.iglob('input_images/*.jpg')):
+        # Görüntüyü okuyun
         img = cv2.imread(image_file)
+         # Görüntüyü yeniden boyutlandırın (80x160 piksel) ve 'a' listesine ekleyin
         a.append(resize(img, (80, 160, 3)))
+        # Her 100 görüntüde bir ilerlemenin kontrolü
         if(i%100==0):
             print(i)
-
+                
+# 'input_final_1.p' adlı bir dosyaya 'a' listesini kaydedin (Pickle ile seri hale getirin)
 f = open('input_final_1.p','wb')
 pickle.dump(a, f, protocol=2)
 f.flush()
 
 
-
+# 'output' klasöründeki *.jpg uzantılı tüm dosyaları işleyin
 for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
+        # Görüntüyü okuyun
         img = cv2.imread(image_file)
+        # Görüntüyü yeniden boyutlandırın (80x160 piksel) ve tek bir kanal haline getirin
         temp = resize(img, (80, 160, 3))
-        temp = temp[:,:,1]
-        temp = temp[:,:,newaxis]
+        temp = temp[:,:,1] # Yeşil kanalı seçin
+        temp = temp[:,:,newaxis] # Yeni boyut ekseni ekleyin
+        # 'b' listesine ekleyin
         b.append(temp)
+        # Her 100 görüntüde bir ilerlemenin kontrolü
         if(i%100==0):
             print(i)
 
-
+# 'output_final_1.p' adlı bir dosyaya 'b' listesini kaydedin (Pickle ile seri hale getirin)
 g = open('output_final_1.p','wb')
 pickle.dump(b, g, protocol=2)
 g.flush()
+# 'b' listesini temizleyin (bunu yapmamızın nedeni bellek kullanımını azaltmaktır)
 b=[]
 

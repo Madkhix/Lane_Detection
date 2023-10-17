@@ -7,7 +7,7 @@ from numpy import newaxis
 from skimage.transform import resize
 import pickle
 
-# 'a' ve 'b' adlı iki liste oluşturuluyor, bu listeler görüntü verilerini depolamak için kullanılacak
+# Two lists named 'a' and 'b' are created, the images of these lists will be used to store
 a = []
 b = []
 

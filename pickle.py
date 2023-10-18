@@ -11,7 +11,7 @@ import pickle
 a = []
 b = []
 
-# 'input_images' klasöründeki *.jpg uzantılı tüm dosyaları işleyin
+# Process all files with *.jpg extension in 'input_images'
 for (i,image_file) in enumerate(glob.iglob('input_images/*.jpg')):
         # Görüntüyü okuyun
         img = cv2.imread(image_file)

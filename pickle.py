@@ -21,7 +21,7 @@ for (i,image_file) in enumerate(glob.iglob('input_images/*.jpg')):
         if(i%100==0):
             print(i)
                 
-# 'input_final_1.p' adlı bir dosyaya 'a' listesini kaydedin (Pickle ile seri hale getirin)
+# Save list 'a' in a file named 'input_final_1.p' (serialize with Pickle)
 f = open('input_final_1.p','wb')
 pickle.dump(a, f, protocol=2)
 f.flush()

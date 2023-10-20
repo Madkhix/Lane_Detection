@@ -26,8 +26,7 @@ f = open('input_final_1.p','wb')
 pickle.dump(a, f, protocol=2)
 f.flush()
 
-
-# 'output' klasöründeki *.jpg uzantılı tüm dosyaları işleyin
+# Process all *.jpg files in 'output' folder
 for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
         # Görüntüyü okuyun
         img = cv2.imread(image_file)

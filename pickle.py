@@ -28,7 +28,7 @@ f.flush()
 
 # Process all *.jpg files in 'output' folder
 for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
-        # Görüntüyü okuyun
+        # Read the image
         img = cv2.imread(image_file)
         # Görüntüyü yeniden boyutlandırın (80x160 piksel) ve tek bir kanal haline getirin
         temp = resize(img, (80, 160, 3))

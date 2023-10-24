@@ -30,7 +30,7 @@ f.flush()
 for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
         # Read the image
         img = cv2.imread(image_file)
-        # Görüntüyü yeniden boyutlandırın (80x160 piksel) ve tek bir kanal haline getirin
+        # Resize the image (80x160 pixels) and make it a single channel
         temp = resize(img, (80, 160, 3))
         temp = temp[:,:,1] # Yeşil kanalı seçin
         temp = temp[:,:,newaxis] # Yeni boyut ekseni ekleyin

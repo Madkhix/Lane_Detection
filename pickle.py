@@ -32,7 +32,7 @@ for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
         img = cv2.imread(image_file)
         # Resize the image (80x160 pixels) and make it a single channel
         temp = resize(img, (80, 160, 3))
-        temp = temp[:,:,1] # Yeşil kanalı seçin
+        temp = temp[:,:,1] # Select green channel
         temp = temp[:,:,newaxis] # Yeni boyut ekseni ekleyin
         # 'b' listesine ekleyin
         b.append(temp)

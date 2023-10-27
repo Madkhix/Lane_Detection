@@ -13,7 +13,7 @@ b = []
 
 # Process all files with *.jpg extension in 'input_images'
 for (i,image_file) in enumerate(glob.iglob('input_images/*.jpg')):
-        # Görüntüyü okuyun
+        # Read the image
         img = cv2.imread(image_file)
          # Görüntüyü yeniden boyutlandırın (80x160 piksel) ve 'a' listesine ekleyin
         a.append(resize(img, (80, 160, 3)))
@@ -33,7 +33,7 @@ for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
         # Resize the image (80x160 pixels) and make it a single channel
         temp = resize(img, (80, 160, 3))
         temp = temp[:,:,1] # Select green channel
-        temp = temp[:,:,newaxis] # Yeni boyut ekseni ekleyin
+        temp = temp[:,:,newaxis] # Add a newaxis to the `temp` array along the third dimension.
         # 'b' listesine ekleyin
         b.append(temp)
         # Her 100 görüntüde bir ilerlemenin kontrolü

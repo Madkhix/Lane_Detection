@@ -17,7 +17,7 @@ for (i,image_file) in enumerate(glob.iglob('input_images/*.jpg')):
         img = cv2.imread(image_file)
          # Görüntüyü yeniden boyutlandırın (80x160 piksel) ve 'a' listesine ekleyin
         a.append(resize(img, (80, 160, 3)))
-        # Her 100 görüntüde bir ilerlemenin kontrolü
+        # Check progress every 100 images
         if(i%100==0):
             print(i)
                 

@@ -34,7 +34,7 @@ for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
         temp = resize(img, (80, 160, 3))
         temp = temp[:,:,1] # Select green channel
         temp = temp[:,:,newaxis] # Add a newaxis to the `temp` array along the third dimension.
-        # 'b' listesine ekleyin
+        # add to list 'b'
         b.append(temp)
         # Her 100 görüntüde bir ilerlemenin kontrolü
         if(i%100==0):

@@ -36,7 +36,7 @@ for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
         temp = temp[:,:,newaxis] # Add a newaxis to the `temp` array along the third dimension.
         # add to list 'b'
         b.append(temp)
-        # Her 100 görüntüde bir ilerlemenin kontrolü
+        # Check progress every 100 images
         if(i%100==0):
             print(i)
 

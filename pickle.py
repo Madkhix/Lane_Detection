@@ -40,7 +40,7 @@ for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
         if(i%100==0):
             print(i)
 
-# 'output_final_1.p' adlı bir dosyaya 'b' listesini kaydedin (Pickle ile seri hale getirin)
+# Recording list 'b' to a file named 'output_final_1.p' (Serialization selection with pickle)
 g = open('output_final_1.p','wb')
 pickle.dump(b, g, protocol=2)
 g.flush()

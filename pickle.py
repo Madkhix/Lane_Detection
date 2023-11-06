@@ -44,6 +44,6 @@ for (i,image_file) in enumerate(glob.iglob('output/*.jpg')):
 g = open('output_final_1.p','wb')
 pickle.dump(b, g, protocol=2)
 g.flush()
-# 'b' listesini temizleyin (bunu yapmamızın nedeni bellek kullanımını azaltmaktır)
+# clear list 'b' (reason for changing this is to make memory smaller)
 b=[]
 

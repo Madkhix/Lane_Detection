@@ -3,7 +3,7 @@ import pickle
 from sklearn.utils import shuffle
 from sklearn.model_selection import train_test_split
 
-# Required Libraries
+# Required libraries
 from keras.models import Sequential
 from keras.layers import Activation, Dropout, UpSampling2D
 from keras.layers import Conv2DTranspose, Conv2D, MaxPooling2D
@@ -15,7 +15,7 @@ from skimage.transform import resize
 import matplotlib.pyplot as plt
 import cv2
 import os
-# Your Project Path
+# Your project path
 os.chdir("E:/Users/İndirilenler/yapay_zeka_proje_Lane_Detection/")
 # Training Data
 train_images = pickle.load(open("full_CNN_train.p", "rb" ))

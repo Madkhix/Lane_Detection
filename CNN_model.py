@@ -15,6 +15,7 @@ from skimage.transform import resize
 import matplotlib.pyplot as plt
 import cv2
 import os
+
 # Your project path
 os.chdir("E:/Users/İndirilenler/yapay_zeka_proje_Lane_Detection/")
 # Training Data
@@ -22,7 +23,6 @@ train_images = pickle.load(open("full_CNN_train.p", "rb" ))
 
 # Processed Images
 labels = pickle.load(open("full_CNN_labels.p", "rb" ))
-
 
 # Converts Data Into an Array
 train_images = np.array(train_images)
@@ -36,13 +36,11 @@ train_images, labels = shuffle(train_images, labels)
 
 X_train, X_val, y_train, y_val = train_test_split(train_images, labels, test_size=0.1)
 
-
 # The number of samples given to the network, the number of repetitions and the pool size determine the size of the pool to be created.
 batch_size = 256
 epochs = 10
 pool_size = (2, 2)
 input_shape = X_train.shape[1:]
-
 
 # Neural Networks
 model = Sequential()
@@ -120,8 +118,6 @@ model.add(Conv2DTranspose(16, (3, 3), padding='valid', strides=(1,1), activation
 model.add(Conv2DTranspose(1, (3, 3), padding='valid', strides=(1,1), activation = 'relu', name = 'Final'))
 
 # Neural Network 
-
-
 from keras import optimizers
 
 datagen = ImageDataGenerator(channel_shift_range=0.2,horizontal_flip=True)
@@ -137,10 +133,10 @@ epochs=epochs, verbose=1, validation_data=(X_val, y_val))
 # model.summary()
 # print(len(model.layers)) 
 
-
 # Training Of The Model Stops
 model.trainable = False
 model.compile(optimizer='Adam', loss='mean_squared_error',metrics=['accuracy'])
+
 # Save Model
 model.save('full_CNN_model.h5')
 

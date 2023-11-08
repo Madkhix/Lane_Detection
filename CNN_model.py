@@ -18,7 +18,7 @@ import os
 
 # Your project path
 os.chdir("E:/Users/İndirilenler/yapay_zeka_proje_Lane_Detection/")
-# Training Data
+# Training data
 train_images = pickle.load(open("full_CNN_train.p", "rb" ))
 
 # Processed Images

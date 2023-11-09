@@ -21,7 +21,7 @@ os.chdir("E:/Users/İndirilenler/yapay_zeka_proje_Lane_Detection/")
 # Training data
 train_images = pickle.load(open("full_CNN_train.p", "rb" ))
 
-# Processed Images
+# Processed images
 labels = pickle.load(open("full_CNN_labels.p", "rb" ))
 
 # Converts Data Into an Array

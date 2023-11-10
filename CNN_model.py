@@ -24,7 +24,7 @@ train_images = pickle.load(open("full_CNN_train.p", "rb" ))
 # Processed images
 labels = pickle.load(open("full_CNN_labels.p", "rb" ))
 
-# Converts Data Into an Array
+# Converts data into an array
 train_images = np.array(train_images)
 labels = np.array(labels)
 

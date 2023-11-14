@@ -22,7 +22,7 @@ blue_threshold = 200
 rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 
 # Do a boolean or with the "|" character to identify
-# pixels below the thresholds
+# Pixels below the thresholds
 thresholds = (image[:,:,0] < rgb_threshold[0]) \
             | (image[:,:,1] < rgb_threshold[1]) \
             | (image[:,:,2] < rgb_threshold[2])

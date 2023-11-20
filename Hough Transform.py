@@ -33,7 +33,7 @@ masked_edges = cv2.bitwise_and(edges, mask)
 rho = 1 # Distance resolution in pixels of the Hough grid
 theta = np.pi/180 # Angular resolution in radians of the Hough grid
 threshold = 2     # Minimum number of votes (intersections in Hough grid cell)
-min_line_length = 4 #minimum number of pixels making up a line
+min_line_length = 4 #Minimum number of pixels making up a line
 max_line_gap = 5    # maximum gap in pixels between connectable line segments
 line_image = np.copy(image)*0 # creating a blank to draw lines on
 

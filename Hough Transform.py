@@ -35,7 +35,7 @@ theta = np.pi/180 # Angular resolution in radians of the Hough grid
 threshold = 2     # Minimum number of votes (intersections in Hough grid cell)
 min_line_length = 4 #Minimum number of pixels making up a line
 max_line_gap = 5    # Maximum gap in pixels between connectable line segments
-line_image = np.copy(image)*0 # creating a blank to draw lines on
+line_image = np.copy(image)*0 # Creating a blank to draw lines on
 
 # Run Hough on edge detected image
 # Output "lines" is an array containing endpoints of detected line segments

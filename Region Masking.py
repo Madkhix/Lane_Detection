@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import numpy as np
 import os
-
+#Your Project Path
 os.chdir('E:/Users/İndirilenler/yapay_zeka_proje_Lane_Detection')
 # Read in the image
 image = mpimg.imread('test_images/solidWhiteRight.jpg')

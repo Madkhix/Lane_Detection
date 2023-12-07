@@ -14,7 +14,7 @@ color_select = np.copy(image)
 line_image = np.copy(image)
 
 # Define color selection criteria
-# MOdify THESE VARIABLES TO MAKE YOUR COLOR SELECTION
+# Modify THESE VARIABLES TO MAKE YOUR COLOR SELECTION
 red_threshold = 200
 green_threshold = 200
 blue_threshold = 200

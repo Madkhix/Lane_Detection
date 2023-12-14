@@ -14,7 +14,7 @@ color_select = np.copy(image)
 line_image = np.copy(image)
 
 # Define color selection criteria
-# Modify these vARIABLES TO MAKE YOUR COLOR SELECTION
+# Modify these variables TO MAKE YOUR COLOR SELECTION
 red_threshold = 200
 green_threshold = 200
 blue_threshold = 200
@@ -23,7 +23,7 @@ rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 
 # Define the vertices of a triangular mask.
 # Keep in mind the origin (x=0, y=0) is in the upper left
-# Modify THESE VALUES TO ISOLATE THE REGION 
+# Modify these VALUES TO ISOLATE THE REGION 
 # WHERE THE LANE LINES ARE IN THE IMAGE
 left_bottom = [100, 539]
 right_bottom = [950, 539]

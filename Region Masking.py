@@ -23,7 +23,7 @@ rgb_threshold = [red_threshold, green_threshold, blue_threshold]
 
 # Define the vertices of a triangular mask.
 # Keep in mind the origin (x=0, y=0) is in the upper left
-# Modify these values to isolate the REGION 
+# Modify these values to isolate the region 
 # Where THE LANE LINES ARE IN THE IMAGE
 left_bottom = [100, 539]
 right_bottom = [950, 539]

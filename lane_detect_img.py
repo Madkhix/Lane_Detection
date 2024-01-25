@@ -21,7 +21,7 @@ def gaussian_blur(img, kernel_size):
 
 def region_of_interest(img, vertices):
   
-    #boş maske tanımlanır
+    #empty mask is defined
     mask = np.zeros_like(img)   
     
     #maskeyi doldurmak için bir renk tanımlanır

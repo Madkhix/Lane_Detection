@@ -24,7 +24,7 @@ def region_of_interest(img, vertices):
     #empty mask
     mask = np.zeros_like(img)   
     
-    #maskeyi doldurmak için bir renk tanımlanır
+    #color to fill the mask
     if len(img.shape) > 2:
         channel_count = img.shape[2]  # i.e. 3 or 4 depending on your image
         ignore_mask_color = (255,) * channel_count

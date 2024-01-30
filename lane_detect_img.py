@@ -31,7 +31,7 @@ def region_of_interest(img, vertices):
     else:
         ignore_mask_color = 255
         
-    # Çokgenin içindeki pikselleri dolgu rengiyle doldurma  
+    # Fill pixels inside a polygon with a fill color  
     cv2.fillPoly(mask, vertices, ignore_mask_color)
     
     # görüntüyü sadece maske piksellerinin sıfır olmadığı durumlarda döndür

@@ -34,7 +34,7 @@ def region_of_interest(img, vertices):
     # Fill pixels inside a polygon with a fill color  
     cv2.fillPoly(mask, vertices, ignore_mask_color)
     
-    # görüntüyü sadece maske piksellerinin sıfır olmadığı durumlarda döndür
+    # rotate image only if mask pixels are non-zero
     masked_image = cv2.bitwise_and(img, mask)
     return masked_image
 

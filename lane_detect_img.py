@@ -74,7 +74,7 @@ def slope_lines(image,lines):
 
     for slope, intercept in [left_line, right_line]:
 
-        # y1 yüksekliği elde edilir
+        # y1 height is obtained
         rows, cols = image.shape[:2]
         y1= int(rows) #image.shape[0]
 

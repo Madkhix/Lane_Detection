@@ -78,7 +78,7 @@ def slope_lines(image,lines):
         rows, cols = image.shape[:2]
         y1= int(rows) #image.shape[0]
 
-        # y2 alınır
+        # y2 value
         y2= int(rows*0.6) #int(0.6*y1)
 
         # doğru denklemi

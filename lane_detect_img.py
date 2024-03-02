@@ -81,7 +81,7 @@ def slope_lines(image,lines):
         # y2 value
         y2= int(rows*0.6) #int(0.6*y1)
 
-        # doğru denklemi
+        # line equation
         x1=int((y1-intercept)/slope)
         x2=int((y2-intercept)/slope)
         poly_vertices.append((x1, y1))

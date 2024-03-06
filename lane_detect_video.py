@@ -25,7 +25,7 @@ def road_lines(image):
 
     # Add Prediction To Get Average
     lanes.recent_fit.append(prediction)
-    # Son beş tahmin kullanılır
+    # The last five predictions are used
     if len(lanes.recent_fit) > 5:
         lanes.recent_fit = lanes.recent_fit[1:]
 
